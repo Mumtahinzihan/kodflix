@@ -1,10 +1,10 @@
 .App {
   text-align: center;
   font-size: 16px;
-  margin: 2rem;
+  background-color: black;
 }
 h1 {
-  color: indigo;
+  color: rgb(214, 107, 45);
   font-size: 4rem;
 }
 h3 {
@@ -14,7 +14,6 @@ h3 {
   background-color: rgb(100, 32, 5);
 }
 .container {
-  width: 100%;
   display: flex;
 }
 .movie {
@@ -22,5 +21,19 @@ h3 {
 }
 img {
   width: 100%;
-  height: 60rem;
+  height: 50rem;
+}
+h3:hover {
+  color: rgb(106, 177, 88);
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+  img {
+    height: 30rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
 }
