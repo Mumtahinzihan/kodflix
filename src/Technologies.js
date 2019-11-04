@@ -17,7 +17,7 @@ export default function Technologies() {
         <div className='container'>
           <Allmovies name='The Addams Family' image={addamsFamily} />
           <Allmovies name='The Mask' image={mask} />
-          <Allmovies name='>Annabelle Comes Home' image={anabelle} />
+          <Allmovies name='Annabelle Comes Home' image={anabelle} />
         </div>
       </div>
     )
