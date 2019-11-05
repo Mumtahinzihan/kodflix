@@ -1,11 +1,14 @@
 .App {
   text-align: center;
   font-size: 16px;
-  background-color: rgb(233, 220, 220);
 }
-h1 {
+header h1 {
   color: rgb(214, 107, 45);
   font-size: 4rem;
+}
+header {
+  background-color: rgb(65, 20, 7);
+  padding: .2rem 0;
 }
 h3 {
   font-size: 2.5rem;
