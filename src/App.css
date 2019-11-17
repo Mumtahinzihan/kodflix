@@ -1,36 +1,37 @@
 .App {
   text-align: center;
-  font-size: 16px;
 }
 header h1 {
   color: rgb(214, 107, 45);
-  font-size: 4rem;
 }
 header {
   background-color: rgb(65, 20, 7);
-  padding: .2rem 0;
+  padding: 1px;
 }
 h3 {
-  font-size: 2.5rem;
   color: rgb(214, 161, 14);
 }
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  font-style: oblique;
+  background: black;
 }
 .movie {
-  flex: 1;
   position: relative;
-  border: 2px solid rgb(1, 10, 10);
   overflow: hidden;
 }
 img {
-  width: 100%;
+  width: 98%;
+  border: .5px solid wheat;
   height: 100%;
+  border-radius: 0%;
+  transition: all ease-in .6s;
 }
 .overlay {
-  transition: bottom ease .8s;
+  transition: bottom ease-in .6s;
   position: absolute;
-  bottom: -10rem;
+  bottom: -40%;
   left: 0;
   background-color: rgb(51, 20, 9);
   width: 100%;
@@ -38,16 +39,9 @@ img {
 }
 .movie:hover .overlay {
   opacity: .7;
-  bottom: 15rem;
+  bottom: 0;
 }
-@media only screen and (max-width: 900px) {
-  .container {
-    display: block;
-  }
-  img {
-    height: 30rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
+img:hover {
+  width: 100%;
+  border-radius: 10%;
 }
