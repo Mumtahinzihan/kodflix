@@ -6,6 +6,14 @@
 }
 .details .container .synopsis {
     color: #d8bfd8;
+    height: 50em;
+    font-size: 1.5em;
+    flex: 1;
+}
+.details .container .image {
+    flex: 1;
+    height: 50em;
+
     
 }
 
@@ -13,7 +21,10 @@
     .details .container {
         flex-direction: column;
     }
-    .details .container .image img {
-        max-height: 50%;
-    }
+    .details .container .image {
+        height: 25em;
   }
+  .details .container .synopsis {
+      font-size: 1em;
+  }
+}
