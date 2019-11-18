@@ -1,0 +1,19 @@
+.details {
+    background-color: #d8bfd8;
+}
+.details .container {
+    display: flex;
+}
+.details .container .synopsis {
+    color: #d8bfd8;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .details .container {
+        flex-direction: column;
+    }
+    .details .container .image img {
+        max-height: 50%;
+    }
+  }

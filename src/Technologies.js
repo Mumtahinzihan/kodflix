@@ -14,7 +14,7 @@ export default function Technologies() {
             <Allmovies
               key={allMovies.id}
               id={allMovies.id}
-              name={allMovies.name}
+              name={allMovies.name.toUpperCase()}
               image={allMovies.image} />
           ))
         }

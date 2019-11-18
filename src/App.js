@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Technologies from './Technologies';
-import Details from './Details';
+import Details from './Details/Details';
 import NotFound from './not-found';
 import './App.css';
 function App() {
