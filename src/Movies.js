@@ -1,8 +1,8 @@
 import React from 'react';
 import Allmovies from './Allmovies';
-import getTechnologies from './technologies-get';
+import getTechnologies from './Movies-get';
 
-export default function Technologies() {
+export default function Movies() {
   return (
     <div>
       <header>
