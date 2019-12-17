@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getTechnologies from '../Movies-get';
+import getMovies from '../GetMovies';
 import './details.css';
 
 export default class Details extends Component {
@@ -12,7 +12,7 @@ export default class Details extends Component {
     }
     componentDidMount() {
         let technologyId = this.props.match.params.technologyId;
-        let movieId = getTechnologies().find(technology => technology.id === technologyId)
+        let movieId = getMovies().find(technology => technology.id === technologyId)
         this.setState({ movieId });
         ;
     }

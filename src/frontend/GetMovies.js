@@ -5,7 +5,7 @@ import terminator from './images/terminatorMovieCover.jpg';
 import mask from './images/the-mask.jpg';
 import addamsFamily from './images/addams-family-1.jpg';
 
-export default function getTechnologies() {
+export default function getMovies() {
     return [
         { id: 'joker', name: 'JOKER(2019)', image: joker, synopsis: 'Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he\'s part of the world around him. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.'},
         { id: 'terminator', name: 'TERMINATOR: The Dark Fate', image: terminator, synopsis: `In Mexico City, a newly modified liquid Terminator -- the Rev-9 model -- arrives from the future to kill a young factory worker named Dani Ramos. Also sent back in time is Grace, a hybrid cyborg human who must protect Ramos from the seemingly indestructible robotic assassin. But the two women soon find some much-needed help from a pair of unexpected allies -- seasoned warrior Sarah Connor and the T-800 Terminator.` },

@@ -1,6 +1,6 @@
 import React from 'react';
 import Allmovies from './Allmovies';
-import getTechnologies from './Movies-get';
+import getTechnologies from './GetMovies';
 
 export default function Movies() {
   return (
