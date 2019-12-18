@@ -1,6 +1,6 @@
 import React from 'react';
 import Allmovies from './Allmovies';
-import getTechnologies from './GetMovies';
+import getMovies from './GetMovies';
 
 export default function Movies() {
   return (
@@ -10,12 +10,12 @@ export default function Movies() {
       </header>
       <div className='container'>
         {
-          getTechnologies().map((allMovies) => (
+          getMovies().map((movie) => (
             <Allmovies
-              key={allMovies.id}
-              id={allMovies.id}
-              name={allMovies.name.toUpperCase()}
-              image={allMovies.image} />
+              key={movie.id}
+              id={movie.id}
+              name={movie.name.toUpperCase()}
+              image={movie.image} />
           ))
         }
       </div>

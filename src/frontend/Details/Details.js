@@ -11,10 +11,9 @@ export default class Details extends Component {
         }
     }
     componentDidMount() {
-        let technologyId = this.props.match.params.technologyId;
-        let movieId = getMovies().find(technology => technology.id === technologyId)
+        let showId = this.props.match.params.showId;
+        let movieId = getMovies().find(movie => movie.id === showId)
         this.setState({ movieId });
-        ;
     }
     render() {
         if (this.state.movieId === undefined) {
