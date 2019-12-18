@@ -1,35 +1,38 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getMovies from '../GetMovies';
+// import getMovies from '../GetMovies';
 import './details.css';
 
 export default class Details extends Component {
     constructor() {
         super();
         this.state = {
-            movieId: {}
+            movie: {}
         }
     }
     componentDidMount() {
-        let showId = this.props.match.params.showId;
-        let movieId = getMovies().find(movie => movie.id === showId)
-        this.setState({ movieId });
+        fetch('/rest/movies/:')
+        .then(response => response.json())
+        .then(movie => this.setState({movie: movie}))
+        // let showId = this.props.match.params.showId;
+        // let movieId = getMovies().find(movie => movie.id === showId)
+        // this.setState({ movieId });
     }
     render() {
-        if (this.state.movieId === undefined) {
+        if (this.state.movie === undefined) {
             return <Redirect to='/not-found' />
         } else {
             return (
                 <div className='details'>
                     <Link to='/'>Back to home-page</Link>
-                    <h1>{this.state.movieId.name}</h1>
+                    <h1>{this.state.movie.name}</h1>
                     <div className='container'>
                         <div className='synopsis'>
-                            {this.state.movieId.synopsis}
+                            {this.state.movie.synopsis}
                         </div>
                         <div className='image'>
-                            <img src={this.state.movieId.image}
-                                alt={this.state.movieId.image} />
+                            <img src={this.state.movie.image}
+                                alt={this.state.movie.image} />
                         </div>
                     </div>
                 </div>
