@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Allmovies from './Allmovies';
-// import getMovies from './GetMovies';
 
 export default function Movies() {
 
@@ -9,7 +8,7 @@ export default function Movies() {
   useEffect (()=> {
     fetch('/rest/movies')
     .then(response => response.json())
-    .then(setMovies(movies))
+    .then(movies => setMovies(movies))
   }, [movies])
 
   return (
@@ -20,11 +19,13 @@ export default function Movies() {
       <div className='container'>
         {
           movies.map((movie) => (
+          <div key={movie.id}>
+            <h1>where are you?</h1>
             <Allmovies
-              key={movie.id}
               id={movie.id}
-              name={movie.name.toUpperCase()}
-              image={movie.image} />
+              name={movie.name.toUpperCase()} 
+            />
+          </div>
           ))
         }
       </div>

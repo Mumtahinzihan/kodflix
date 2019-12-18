@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-// import getMovies from '../GetMovies';
 import './details.css';
 
 export default class Details extends Component {
@@ -19,6 +18,8 @@ export default class Details extends Component {
     render() {
         if (this.state.movie === undefined) {
             return <Redirect to='/not-found' />
+        } else if (!this.state.movie.id){
+            return <div>Fetch Loading</div>
         } else {
             return (
                 <div className='details'>
@@ -29,8 +30,7 @@ export default class Details extends Component {
                             {this.state.movie.synopsis}
                         </div>
                         <div className='image'>
-                            <img src={this.state.movie.image}
-                                alt={this.state.movie.image} />
+                        <img src={require(`../images/${this.state.movie.id}-MovieCover.jpg`)} alt={`${this.state.movie.name} cover`} />
                         </div>
                     </div>
                 </div>
