@@ -11,12 +11,10 @@ export default class Details extends Component {
         }
     }
     componentDidMount() {
-        fetch('/rest/movies/:')
+        let showId = this.props.match.params.showId;
+        fetch(`/rest/movies/${showId}`)
         .then(response => response.json())
         .then(movie => this.setState({movie: movie}))
-        // let showId = this.props.match.params.showId;
-        // let movieId = getMovies().find(movie => movie.id === showId)
-        // this.setState({ movieId });
     }
     render() {
         if (this.state.movie === undefined) {
