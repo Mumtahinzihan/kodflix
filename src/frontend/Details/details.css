@@ -1,29 +1,30 @@
 .details {
-    background-color: #d8bfd8;
+    background-color: #dddddd;
 }
 .details .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100vh;
+    grid-gap: 50px;
+    margin: 0 2%;
 }
 .details .container .synopsis {
-    color: #d8bfd8;
-    height: 50em;
+    color: #000000;
     font-size: 1.5em;
-    flex: 1;
+    margin: 5%;
 }
 .details .container .image {
-    flex: 1;
-    height: 50em;
-
-    
+    width: 100%;
+    height: 100vh;
 }
-
 @media only screen and (max-width: 600px) {
     .details .container {
         flex-direction: column;
+        display: flex;
     }
-    .details .container .image {
+    /* .details .container .image {
         height: 25em;
-  }
+  } */
   .details .container .synopsis {
       font-size: 1em;
   }

@@ -6,10 +6,10 @@ export default function Movies() {
   const [movies, setMovies] = useState([]);
 
   useEffect (()=> {
-    fetch('/rest/movies')
+    fetch('/rest/movies/')
     .then(response => response.json())
-    .then(movies => setMovies(movies))
-  }, [movies])
+    .then(moviesdata => setMovies(moviesdata))
+  }, [])
 
   return (
     <div>
@@ -20,10 +20,10 @@ export default function Movies() {
         {
           movies.map((movie) => (
           <div key={movie.id}>
-            <h1>where are you?</h1>
             <Allmovies
               id={movie.id}
-              name={movie.name.toUpperCase()} 
+              name={movie.name.toUpperCase()}
+              synopsis={movie.synopsis} 
             />
           </div>
           ))
